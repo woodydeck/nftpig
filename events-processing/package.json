@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Steps for backend:",
+  "main": "src/handlers/EventHandler.js",
+  "scripts": {
+    "run-local": "node -r dotenv/config src/server.js dotenv_config_path=.env.local",
+    "run-testnet": "node -r dotenv/config src/server.js dotenv_config_path=.env.testnet",
+    "run-mainnet": "node -r dotenv/config src/server.js dotenv_config_path=.env.mainnet",
+    "generate-images": "node -r dotenv/config src/scripts/generateImages.js dotenv_config_path=.env.mainnet"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@alch/alchemy-web3": "^1.4.2",
+    "dotenv": "^16.0.1",
+    "image-data-uri": "^2.0.1",
+    "lodash": "^4.17.21",
+    "node-scp": "^0.0.17",
+    "text-to-image": "^5.2.0"
+  }
+}

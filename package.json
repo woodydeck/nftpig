@@ -1,0 +1,24 @@
+{
+  "name": "nftpig",
+  "version": "1.0.0",
+  "description": "I cut my teeth in the dotcom boom as a teenager shorting AOL months too soon, and posting as a dot (anon) on the first Web 2.0 mass free speech message board FuckedCompany.com (known colloquially as FC). FC was a predecessor to 4chan, reddit, and Twitter.",
+  "main": "txt2img.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woodydeck/nftpig.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woodydeck/nftpig/issues"
+  },
+  "homepage": "https://github.com/woodydeck/nftpig#readme",
+  "dependencies": {
+    "canvas": "^2.9.1",
+    "image-data-uri": "^2.0.1",
+    "text-to-image": "^5.2.0"
+  }
+}
