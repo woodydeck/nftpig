@@ -79,7 +79,7 @@ function buildMetadata(tokenID) {
     const ideaNumber = tokenID.substring(0, tokenID.length - 16)
 
     //Set the background value.
-    background.value = getBackground(tokenId.slice(-15, -14))
+    background.value = getBackground(tokenID.slice(-15, -14))
     //Set the total characters (including spaces) in the sentence.
     idea.attributes[1].value = characterTotal
     //Set the description based on the idea.

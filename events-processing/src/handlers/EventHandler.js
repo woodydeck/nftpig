@@ -16,7 +16,7 @@ class EventHandler {
         console.log('Get deployed contract instance.')
         const deployedContract = new web3.eth.Contract(ABI, ADDRESS)
 
-        const blockNumber = 26352271;
+        const blockNumber = 28571000;
 
         deployedContract.events.Transfer({
             filter: { from: 0 }, //Mints are all transfer events, but coming from the blackhole address (from: 0)
@@ -24,7 +24,7 @@ class EventHandler {
         }).on('connected', (subscriptionId) => {
             console.log(`Listening for mint events from block: ${blockNumber}, under subscriptionId: ${subscriptionId}`)
         }).on('data', async (event) => {
-            console.log(event.returnValues[1] + " has minted token # " + event.returnValues[2] + ". This is NFT Idea #" + event.returnValues[2].substring(0, event.returnValues[2].length - 16) + ".")
+            console.log(event.returnValues[1] + " has minted token ID " + event.returnValues[2] + ". This is NFT idea #" + event.returnValues[2].substring(0, event.returnValues[2].length - 16) + ".")
             await EventHandler.processTransferEvent(event)
         }).on('error', (error, receipt) => {
             console.error(`Failed to handle a mint event, error: ${JSON.stringify(error)}, receipt: ${receipt}`)

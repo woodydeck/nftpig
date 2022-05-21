@@ -13,7 +13,7 @@ const {
 const processPastMintEvents = async () => {
     console.log('Get deployed contract instance.')
     const deployedContract = new web3.eth.Contract(ABI, ADDRESS)
-    const blockNumber = 26352271;
+    const blockNumber = 28571000;
 
     console.log(`Processing past mint events starting from ${blockNumber} block...`);
 
